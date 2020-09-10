@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="projectbaseDataSet" targetNamespace="http://tempuri.org/projectbaseDataSet.xsd" xmlns:mstns="http://tempuri.org/projectbaseDataSet.xsd" xmlns="http://tempuri.org/projectbaseDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="projectbaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="projectbaseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.schooldiary.Properties.Settings.GlobalReference.Default.projectbaseConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ocenyTableAdapter" GeneratorDataComponentClassName="ocenyTableAdapter" Name="oceny" UserDataComponentName="ocenyTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="projectbaseConnectionString (Settings)" DbObjectName="projectbase.oceny" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `idoceny`, `ocena`, `czaswystawienia`, `zaco`, `uczniowie_iducznia`, `zajecia_idzajec` FROM `oceny`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="projectbaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="projectbaseDataSet" msprop:Generator_UserDSName="projectbaseDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="oceny" msprop:Generator_TableClassName="ocenyDataTable" msprop:Generator_TableVarName="tableoceny" msprop:Generator_TablePropName="oceny" msprop:Generator_RowDeletingName="ocenyRowDeleting" msprop:Generator_RowChangingName="ocenyRowChanging" msprop:Generator_RowEvHandlerName="ocenyRowChangeEventHandler" msprop:Generator_RowDeletedName="ocenyRowDeleted" msprop:Generator_UserTableName="oceny" msprop:Generator_RowChangedName="ocenyRowChanged" msprop:Generator_RowEvArgName="ocenyRowChangeEvent" msprop:Generator_RowClassName="ocenyRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

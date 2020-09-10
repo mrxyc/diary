@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C1FA678-DCB6-4651-B90A-6FAFCE202E8B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>schooldiary</RootNamespace>
+    <AssemblyName>schooldiary</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\..\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity">
+      <HintPath>..\..\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\MySql.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.EntityFramework">
+      <HintPath>..\..\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\MySql.Data.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Debugger">
+      <HintPath>..\..\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\MySql.Debugger.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Debugger.VisualStudio">
+      <HintPath>..\..\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\MySql.Debugger.VisualStudio.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Parser">
+      <HintPath>..\..\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\MySql.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.VisualStudio">
+      <HintPath>..\..\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\MySql.VisualStudio.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DaneNauczyciel.cs" />
+    <Compile Include="DaneRodzic.cs" />
+    <Compile Include="DaneUczen.cs" />
+    <Compile Include="DodajOcene.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajOcene.Designer.cs">
+      <DependentUpon>DodajOcene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DodajOceneTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajOceneTest.Designer.cs">
+      <DependentUpon>DodajOceneTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrekNaucz.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrekNaucz.Designer.cs">
+      <DependentUpon>FrekNaucz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrekUczen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrekUczen.Designer.cs">
+      <DependentUpon>FrekUczen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log.Designer.cs">
+      <DependentUpon>Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainRodzic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainRodzic.Designer.cs">
+      <DependentUpon>MainRodzic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainUczen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainUczen.Designer.cs">
+      <DependentUpon>MainUczen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyFirstControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyFirstControl.Designer.cs">
+      <DependentUpon>MyFirstControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OcenyNaucz.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OcenyNaucz.Designer.cs">
+      <DependentUpon>OcenyNaucz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OcenyUczen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OcenyUczen.Designer.cs">
+      <DependentUpon>OcenyUczen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Plan.Designer.cs">
+      <DependentUpon>Plan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="projectbaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>projectbaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DodajOcene.resx">
+      <DependentUpon>DodajOcene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DodajOceneTest.resx">
+      <DependentUpon>DodajOceneTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrekNaucz.resx">
+      <DependentUpon>FrekNaucz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrekUczen.resx">
+      <DependentUpon>FrekUczen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log.resx">
+      <DependentUpon>Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainRodzic.resx">
+      <DependentUpon>MainRodzic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainUczen.resx">
+      <DependentUpon>MainUczen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFirstControl.resx">
+      <DependentUpon>MyFirstControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OcenyNaucz.resx">
+      <DependentUpon>OcenyNaucz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OcenyUczen.resx">
+      <DependentUpon>OcenyUczen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plan.resx">
+      <DependentUpon>Plan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="projectbaseDataSet.xsc">
+      <DependentUpon>projectbaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="projectbaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>projectbaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="projectbaseDataSet.xss">
+      <DependentUpon>projectbaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
